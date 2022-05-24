@@ -20,6 +20,8 @@ def encode_olc(request):
     calls = request_json['calls']
     return_value = []
 
+    # This code assumes the input data comes as (latitude,longitude) pairs.
+    # This code does not do error checking on input.
     for call in calls:
         latitude = call[0]
         longitude = call[1]
